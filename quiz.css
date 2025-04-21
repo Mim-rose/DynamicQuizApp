@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background-color: azure;
+}
+.MyQuizApp{
+    height: 580px;
+    width: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(234, 225, 214);
+    box-shadow: gray 0px 10px 50px;
+    transform: translate(-50%, -50%);
+    border-radius: 48px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Modified to start at the top */
+}
+
+.img img{
+    width: 100%;
+    height: 270px;
+    border: 2px solid rgba(69, 66, 66, 0.515);
+    border-radius: 48px 48px 0px 0px;
+}
+
+.text1 {
+    width: 85%;
+    margin: 10px auto; /* Reduced top margin to close the gap */
+    display: block;
+    box-sizing: border-box;
+    text-align: justify;
+    padding: 5px 15px 10px 15px;
+    
+}
+
+.text1 h3 {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.text1 p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.MyBtn {
+    position:absolute;
+    right: -1px;
+    bottom:-1px;
+    
+}
+
+.MyBtn button {
+    font-size: 18px; /* Slightly increased font size */
+    font-weight: 600;
+    background-color: tomato;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 10px 30px; /* Slightly increased padding */
+    cursor: pointer;
+    border-radius: 57px 0px 51px 0px;
+    transition: .2s ease-in-out;
+    height: 65px;
+    width: 150px;
+
+}
+
+.MyBtn button:hover {
+    background-color: cornflowerblue;
+}
+
+/* styling of second page starts here */
+
+ .RulesBox{
+height:580px ;
+width:320px ;
+position: absolute;
+top: 50% ;
+left: 50%;
+background-color: rgb(234, 225, 214);
+box-shadow: gray 0px 10px 50px ;
+transform: translate(-50%, -50%);
+border-radius: 48px;
+opacity: 0;
+pointer-events: none;
+display: none;
+}
+.RulesBox.activeInfo{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    display: block;
+}
+.RulesTitle{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 25px;
+    padding: 5px;
+    border-bottom: 2px solid rgb(34, 31, 31);
+    
+
+}
+.RulesList{
+    width: 90%;
+    margin: auto;
+}
+
+ol li{
+    font-size: 20px;
+    font-weight: 400;
+     margin: 16px; 
+    padding: 4.6px;
+}
+
+.buttons button{
+    font-size: 20px;
+    font-weight: 600;
+    background-color:tomato ;
+    border: none;
+    outline: none ;
+    color:black;
+    padding: 6px 25px;
+    cursor: pointer;
+    
+    transition: .2s ease-in-out;
+    width: 140px;
+    height: 67px ;
+    margin-top:69px;
+    
+    
+    
+}
+
+.ExitButton{
+    border-radius: 0px 47px  0px 47px;
+    
+}
+.ExitButton:hover{
+    background-color: rgb(138, 40, 40);
+   
+}
+
+.ContinueButton{
+    border-radius: 47px 0px  47px 0px;
+   margin-left: 33px;
+}
+.ContinueButton:hover{
+    background-color: cornflowerblue;
+
+} 
+
+
+/* Styling of third page starts here */
+
+.Questions {
+    height: 580px;
+    width: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(234, 225, 214);
+    box-shadow: gray 0px 10px 50px;
+    transform: translate(-50%, -50%);
+    border-radius: 48px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+
+.Questions.activeQuiz {
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    display: block;
+}
+
+.QuestionsHeader {
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 45px;
+}
+
+.QuestionsHeader .title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.TimeCount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    height: 20px;
+    border: 2px solid gray;
+    background-color: rgba(49, 188, 226, 0.927);
+    color: black;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 2px 0 2px 2px;
+}
+
+.Seconds {
+    font-size: 18px;
+    font-weight: 500;
+    height: 25px;
+    width: 45px;
+    color: white;
+    border-radius: 5px;
+    line-height: 26px;
+    text-align: center;
+    background: rgb(58, 99, 122);
+    border: 2px solid gray;
+    user-select: none;
+}
+
+
+
+
+.section {
+    padding: 25px 30px 20px 30px;
+    background: white;
+}
+
+
+.section span {
+    font-size: 20px; 
+    font-weight: 600;
+    line-height: 1; }
+
+.MyOptions {
+    padding: 20px 0px;
+    display: block;
+}
+
+
+.options {
+    background-color: aliceblue;
+    border: 1px solid rgba(3, 96, 122, 0.6);
+    border-radius: 4px;
+    padding: 12px 15px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.options:hover {
+    background-color: rgba(147, 224, 246, 0.903);
+}
+
+
+.footer{
+    height: 60px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top:0px solid gray;
+    margin-top: 70px;
+ }
+
+.total_que {
+    color: black;
+    font-weight: 600;
+    text-shadow: 2px whitesmoke;
+    margin-right: 100px; 
+}
+
+.footer .nextBtn {
+    margin-left: auto; /* Push to the left */
+}
+
+ .footer button{
+    font-size: 18px;
+    font-weight: 600;
+    background-color:tomato ;
+    border: none;
+    outline: none ;
+    color:black;
+    padding: 3px 22px;
+    cursor: pointer;
+    margin-top: 13px;
+    transition: .2s ease-in-out;
+    width: 123px;
+    height: 67px ;
+    border-radius: 57px 0px 51px 0px;
+    color:rgba(255, 255, 255, 0.932);
+    box-shadow:  azure 1px;
+    
+
+ }
+
+ .total_que{
+    color:black;
+    font-weight: 600;
+    text-shadow: 2px whitesmoke;
+    margin-left: auto;
+ }
+
+ .footer .nextBtn:hover{
+    background-color: rgba(49, 188, 226, 0.927);
+    
+
+ } 
+ .options.correct{
+    color:green;
+    background-color: aliceblue;
+    border: 1px solid green;
+ }
+.options.incorrect{
+    color: firebrick;
+    background-color: aliceblue;
+    border: 1px solid firebrick;
+}
+.options.disabled{
+    background-color: rgba(147, 224, 246, 0.903);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+ 
+
+ .QuestionsHeader .time_lines {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px; 
+    background-color: #3881c0e0;
+     z-index: 3;
+}
+
+
+
+/* result part */
+
+/* Styling for Result Page */
+.result-page {
+    height: 580px;
+    width: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(234, 225, 214);
+    box-shadow: gray 0px 10px 50px;
+    transform: translate(-50%, -50%);
+    border-radius: 48px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.result-page.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.result-image img {
+    width: 200px;
+    height: auto;
+}
+
+.score-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.feedback-text {
+    font-style: italic;
+    color: #555;
+}
+
+.result-buttons button {
+    font-size: 1em;
+    font-weight: 600;
+    background-color: tomato;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 57px 0px 51px 0px;
+    transition: .2s ease-in-out;
+    margin: 0 10px;
+}
+
+.result-buttons button:hover {
+    background-color: cornflowerblue;
+}

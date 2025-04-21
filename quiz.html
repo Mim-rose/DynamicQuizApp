@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- First page design -->
+    <div class="MyQuizApp">
+        <div class="img">
+            <img src="images/q2.jpg" alt="Quiz Image">
+        </div>
+        <div class="text1">
+            <h3>Quiz App with Fixed Time</h3>
+            <p>Test your knowledge with our interactive quiz app! Answer the questions within the time limit.</p>
+        </div>
+        <div class="MyBtn">
+            <button id="startQuiz">Start Quiz</button>
+        </div>
+    </div>
+
+    <!-- Rules Page -->
+    <div class="RulesBox hidden">
+        <div class="RulesTitle">Some Rules to Follow</div>
+        <div class="RulesList">
+            <ol>
+                <li>You have a limited time for each question.</li>
+                <li>Once an answer is selected, you cannot change it.</li>
+                <li>No skipping questions.</li>
+                <li>Each correct answer awards you points.</li>
+                <li>Try to answer all questions before time runs out.</li>
+            </ol>
+        </div>
+        <div class="buttons">
+            <button class="ExitButton">Exit Quiz</button>
+            <button class="ContinueButton">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <div class="Questions hidden">
+        <header class="QuestionsHeader">
+            <div class="title">Start Exam</div>
+            <div class="TimeCount">
+                <div class="TimeLeft">Time Left</div>
+                <div class="Seconds">15</div>
+            </div>
+            <div class="time_lines"></div>
+        </header>
+
+        <div class="section">
+            <div class="text3" id="questionText"></div>
+            <div class="MyOptions" id="optionsContainer"></div>
+        </div>
+
+        <footer class="footer">
+            <div class="total_que" id="questionCounter">1 of 5 Questions</div>
+            <button class="nextBtn" id="nextQuestion" disabled>Next Question</button>
+        </footer>
+    </div>
+
+    <!-- Result page -->
+
+    
+     <!-- Result Page -->
+     <div class="result-page hidden" id="resultPage">
+        <div class="result-image">
+            <img src="images/q3.jpg" alt="Result Image">
+        </div>
+        <div class="result-text">
+            <h2>You Have Finished This Exam</h2>
+            <p class="score-text">Your score is <span class="score">0</span> Out Of <span class="total">7</span></p>
+
+            <p class="feedback-text">[Feedback will appear here]</p>
+        </div>
+        <div class="result-buttons">
+            <button class="replay-btn">Replay</button>
+            <button class="quit-btn">Quit Quiz</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/quiz.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
